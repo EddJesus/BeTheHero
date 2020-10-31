@@ -1,0 +1,35 @@
+
+COMPONENTE
+/**
+* Um COMPONENTE no React é uma FUNÇÃO que retorna HTML.
+*
+/
+
+JSX
+/**
+* Quando um HMTL esta escrito dentro de um Javascript ele se chama JSX (Javascript XML)
+*
+/
+
+ESTADOS
+/**
+* Quando quisermos alterar um valor não iremos criar uma variável comum e sim um ESTADO usando o useState que retorna um array com 2 posições, onde na primeira ele devolve o valor passado como parâmetro e na segunda ele devolve uma função que pode alterar esse valor passado.
+*
+/
+
+PROPRIEDADES
+/**
+* >>>>>>>>>>>>>>>>>AINDA NÃO ENTENDI DIREITO<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+*
+/
+
+
+função usando o ESTADO
+/**
+*   let [counter, setCounter] = useState(0); //useState retorna um Array com 2 posições, 1 ficará o retorno do valor mandado como parametro e a outra uma função (que você da o nome) que pode alterar esse valor passado
+*
+*  function increment(){
+*    setCounter(counter + 1)
+*  }
+/
+

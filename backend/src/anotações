@@ -1,0 +1,32 @@
+/**
+ * Métodos HTTP:
+ * 
+ * GET: buscar informações no backend
+ * POST: escrever informações no backend
+ * PUT: alterar informações no backend
+ * DELETE: deletar informações no backend
+ * 
+ */
+
+ /**
+  * Tipos de parâmetros:
+  * 
+  * -> Query Params: parâmetros nomeados enviados na rota após "?". Usados geralmente para: filtros, paginação 
+  * ex: www.teste.com/users?nome=Eduardo&idade=19
+  * 
+  * -> Route Params: parâmetros utilizados para identificar recursos
+  * ex: www.teste.com/users/1
+  * 
+  * -> Request Body: corpo da requisição, utilizado para criar ou alterar recursos
+  * 
+  */
+
+  /**
+   * Formas de comuninicação com o banco de dados:
+   * 
+   * -> Instalando o Driver do Banco: nos comunicaríamos na linguagem do banco. 
+   * ex: SELECT * FROM users WHERE nome = "Eduardo"
+   * 
+   * -> Query builder: nos comunicaríamos utilizando o próprio Javascript
+   * ex: table('users').select('*').where('nome = "Eduardo"')
+   */

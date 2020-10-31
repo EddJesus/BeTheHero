@@ -1,0 +1,21 @@
+/**
+ * DIFERENÇAS ENTRE ReactJs e React Native:
+ * 
+ * - 1ª: Diferença entre as TAGS
+ * -- O React Native não possui as mesmas tags do html normal
+ * -- As tags são importadas e utilizadas como componentes
+ * -- Elas não possuem diferenças semânticas. Um text é sempre um text e um view é sempre um view.
+ * -- algumas TAGS: 
+ *                 - <View/>: usada no lugar de uma div, de um header, de um footer, de uma section, etc. Basicamente todo tipo de container.
+ *                 - <Text/>: usada no lugar de um p, de um h1, de um h2, de um strong, etc. Basicamente todo tipo de texto.
+ * 
+ * 
+ * - 2ª: Diferença na estilização
+ * -- O método normal de dar um Id ou uma Class ou ClassName para o elemento e editar ele no css NÃO FUNCIONA.
+ * -- É sempre necessário passar um style={} contendo a constante onde está salvo a função StyleSheet.create({"css"}) para estilizar
+ * -- TODOS elementos possuem o 'display: flex' por padrão, não existem outros tipos de display
+ * -- As propriedades Css são diferentes:
+ *                 - 1ª diferença: Não existe '-' nas semânticas delas. Onde teria o '-' vira uma letra maíuscula
+ *                 - 2ª diferença: TODOS valores que não são números tem que ter '' em volta
+ *                 - 3ª diferença: NÃO EXISTE HERANÇA DE ESTILO. Não se pode aplicar uma propriedade num elemento pai esperando que pegue no elemento filho.
+ */
