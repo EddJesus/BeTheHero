@@ -30,3 +30,11 @@
    * -> Query builder: nos comunicaríamos utilizando o próprio Javascript
    * ex: table('users').select('*').where('nome = "Eduardo"')
    */
+
+
+   /**
+   * Celebrate:
+   *
+   * Ferramenta para fazer validações no backend juntamente com o @hapi/joi. 
+   *
+   */
