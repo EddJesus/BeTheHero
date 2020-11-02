@@ -52,10 +52,10 @@ const routes = express.Router();
     }), IncidentController.index);
 
     routes.get('/incidents/:id', celebrate({
-        [Segments.QUERY]: Joi.object().keys({
+        [Segments.PARAMS]: Joi.object().keys({
             id: Joi.number()
         })
-    }), IncidentController.get);
+    }), IncidentController.getIncident);
 
     routes.post('/incidents', celebrate({
         [Segments.PARAMS]: Joi.object().keys({

@@ -39,28 +39,17 @@ module.exports = {
         return res.json(incidents);
     },
 
-    async get(req, res){
-        const totalincidents = await connection('incidents').count();
+    async getIncident(req, res){
+        const [totalincidents] = await connection('incidents').count();
         
-        const id = req.params;
+        const { id } = req.params;
 
         const incidents = await connection('incidents')
-        .join('ongs', 'ongs.id', '=', 'incidents.ong_id')
-        .select([
-            'incidents.*',
-            'ongs.name',
-            'ongs.email',
-            'ongs.whatsapp',
-            'ongs.city',
-            'ongs.uf']);
+        .select('*').where('id', '=', id)
 
         res.header('X-Total-Count', totalincidents['count(*)']);
 
-        // if(incidents.id == id){
-        //     return res.json(incidents);
-        // }else{
-        //     return res.json("Error ao solicitar caso")
-        // }
+        return res.json(incidents);
 
     },
 
