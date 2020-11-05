@@ -13,7 +13,11 @@ const routes = express.Router();
 
     //ROTA sessions
 
-    routes.post('/sessions', SessionController.create)
+    routes.post('/sessions', celebrate({
+        [Segments.BODY]: Joi.object().keys({
+            id: Joi.required(),
+        })
+    }), SessionController.create)
 
 
     //ROTA ongs
@@ -23,7 +27,7 @@ const routes = express.Router();
         [Segments.BODY]: Joi.object().keys({  //chamada da função object() por ser um objeto. E chamada da função keys() passando o parâmetros que essa vai receber em formato de objeto
             name: Joi.string().required(), //validações pelas chamadas string() que diz q ele deve ser uma string, pela required() que diz q ele é obrigatório e pela min(n) que fala o número minimo de caracteres dessa string
             email: Joi.string().required().email(), // ##      ##       ##     ...   ##  e pela chamada email() que diz que ele deve ter o formato de email
-            whatsapp: Joi.number().required().min(10).max(11),
+            whatsapp: Joi.string().required().min(10).max(11),
             city: Joi.string().required(),
             uf: Joi.string().required().length(2), // ##        ##       ##     .... ## e pela chamada length(n) que diz que ele deve ter n numéro de caracteres
         })
